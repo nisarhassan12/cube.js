@@ -24,6 +24,17 @@ By contributing to Cube Dev, Inc., You accept and agree to the terms and conditi
 
 Cube.js works with Node.js 8+ and uses yarn as a package manager.
 
+### Online one-click setup for contributing
+
+You can use Gitpod(an online IDE which is free for Open Source) for working on issues and making Prs to this project. With a single click it will launch a workspace and automatically: 
+
+- clone the `cube.js` repo.
+- install the dependencies in `/`, `/docs`, `packages/cubejs-client-core` and `packages/cubejs-client-react`.
+- run `yarn build` in `/` and `/docs`.
+- run `yarn watch` in `/` and `yarn dev` in `/docs`.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/from-referrer/)
+
 ## Development Workflow
 ### Cube.js Client
 

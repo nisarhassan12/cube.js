@@ -1,0 +1,29 @@
+tasks:
+  - name: Docs
+    before: cd docs
+    init: | 
+      yarn install
+      gp sync-done boot
+      yarn build
+    command: yarn dev
+  
+  - name: Watch
+    init: |
+      gp sync-await boot
+      yarn install
+      gp sync-done watch
+      yarn build
+    command: yarn watch
+
+  - name: Client
+    init: gp sync-await watch && cd packages/cubejs-client-core && yarn && yarn link && cd ../.. && cd packages/cubejs-client-react && yarn && yarn link && cd ../..
+    openMode: split-right
+
+ports: 
+  - port: 8000
+    onOpen: open-preview
+    
+
+
+
+  
